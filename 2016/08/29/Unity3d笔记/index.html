@@ -1,0 +1,322 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>Unity3d笔记 | Hexo</title>
+  <meta name="author" content="John Doe">
+  
+  <meta name="description" content="GameObject.CreatePrimitive():创建一个原始游戏对象，七参数可以设置为立方体、球体、圆柱体等系统默认的游戏对象。
+AddComponent():用于给该游戏对象添加一个组件。组件没有自身对应的删除方法，需要使用父类执行Object.Destroy()才能删除 
+123GameObject obj = GameObject.Find(&quot;Cube&quot;);  obj.AddComponent(&quot;Test&quot;);           //给对象添加Test脚本Destroy(obj.GetComponent(&quot;Test&quot;));  //删除对象的Test脚本
+
+renderer.material.color:设置渲染材质的颜色或贴图
+
+trasform.position:设置该游戏对象的位置">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="Unity3d笔记"/>
+  <meta property="og:site_name" content="Hexo"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  
+  
+    <link href="/favicon.png" rel="icon">
+  
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+
+
+</head>
+
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Hexo</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
+
+  <div class="container">
+  	<div class="content">
+    	 
+
+
+	
+		<div class="page-header page-header-inverse ">		
+			<h1 class="title title-inverse "> Unity3d笔记</h1>
+		</div>		
+	
+
+
+
+
+
+
+<div class="row post">
+	<!-- cols -->
+	
+	<div id="top_meta"></div>
+	<div class="col-md-9">
+	
+
+	<!-- content -->
+	<div class="mypage">		
+	  		
+
+	  <ol>
+<li><code>GameObject.CreatePrimitive()</code>:创建一个原始游戏对象，七参数可以设置为立方体、球体、圆柱体等系统默认的游戏对象。</li>
+<li><p><code>AddComponent()</code>:用于给该游戏对象添加一个组件。组件没有自身对应的删除方法，需要使用父类执行Object.Destroy()才能删除 </p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">GameObject obj = GameObject.Find(<span class="string">"Cube"</span>);  </div><div class="line">obj.AddComponent(<span class="string">"Test"</span>);           <span class="comment">//给对象添加Test脚本</span></div><div class="line">Destroy(obj.GetComponent(<span class="string">"Test"</span>));  <span class="comment">//删除对象的Test脚本</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><code>renderer.material.color</code>:设置渲染材质的颜色或贴图</p>
+</li>
+<li><code>trasform.position</code>:设置该游戏对象的位置<a id="more"></a></li>
+<li><p>获取游戏物体的三种方案  </p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">- GameObject obj = GameObject.find(<span class="string">"UI Root\player"</span>);</div><div class="line">    - 该方法的参数为游戏对象在Hierarchy视图中的完整路径</div><div class="line">- GameObject obj = GameObject.FindWithTag(<span class="string">"MyTag"</span>);</div><div class="line">    - 该方法参数为给游戏对象添加的Tag</div><div class="line">- GameObject[] objs = GameObject.FindGameObjectsWithTag(<span class="string">"MyTag"</span>);</div><div class="line">    - 该方法能够获取所有标签为`MyTag`的对象</div></pre></td></tr></table></figure>
+</li>
+<li><p>消息的发送  </p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">BroadcastMessage(<span class="string">"arg1"</span>,<span class="string">"arg2"</span>)    <span class="comment">//向子类发送消息  </span></div><div class="line">  	SednMessage(<span class="string">"arg1"</span>,<span class="string">"arg2"</span>)         <span class="comment">//向自己发送消息  </span></div><div class="line">  	SendMessageUpwards(<span class="string">"arg1"</span>,<span class="string">"arg2"</span>)  <span class="comment">//向父类发送消息  </span></div><div class="line"><span class="comment">//arg1表示接收消息,arg2表示发送的参数</span></div></pre></td></tr></table></figure>
+</li>
+<li><p><code>Instantiate()</code>克隆游戏对象.</p>
+</li>
+<li>游戏对象位置相关  <ul>
+<li><code>obj.transform.position()</code>    //对象的当前位置</li>
+<li><code>obj.transform.Rotate()</code>      //旋转对象</li>
+<li><code>obj.transform.RotateAround()</code>//围绕某点旋转</li>
+<li><code>Time.deltaTime</code>              //上一帧所消耗的时间</li>
+<li><code>Vector3.right</code>               //x轴方向</li>
+<li><code>Vector3.up</code>                  //y轴方向</li>
+<li><code>Vector3.forward</code>             //z轴方向</li>
+<li><code>transform.Translate(Vector3.forward)</code>//平移</li>
+<li><code>transform.localeScale = Vectors(scaleX,scaleY,scaleZ)</code>//缩放</li>
+</ul>
+</li>
+<li>游戏脚本都要继承<code>MonoBehaviour</code>类。而且新建的类名应该和项目资源视图中该脚本的名称对应，否则就无法成功绑定至游戏对象。</li>
+<li>Time类  <ul>
+<li>Time.time:从游戏开始后开始计时，表示机制目前共运行的游戏时间</li>
+<li>Time.deltaTime:获取Update()方法中完成上一帧所消耗的时间</li>
+<li>Time.fixedTime:FixedUpdate()方法中固定消耗的时间中和 </li>
+<li>Time.fixedDeltaTime:固定更新上一帧所消耗的时间。</li>
+</ul>
+</li>
+<li><p><code>WaitForSeconds(int argc)</code>可以让程序等待argc秒。返回值为IEnumerator，在需要等待的地方调用<code>yield return new WaitForSeconds(s)</code>，让主线程等待s秒后继续执行。调用改函数的函数应该将返回类型设置为<code>IEnumerator</code>。  </p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">public</span> <span class="keyword">class</span> <span class="title">test</span> : <span class="title">MonoBehaviour</span></div><div class="line">&#123;</div><div class="line">	<span class="function">IEnumerator <span class="title">Start</span>(<span class="params"></span>)</span></div><div class="line">	&#123;</div><div class="line">		<span class="keyword">return</span> Test();</div><div class="line">	&#125;</div><div class="line">	</div><div class="line">	<span class="function">IEnumerator <span class="title">Test</span>(<span class="params"></span>)</span></div><div class="line">	&#123;</div><div class="line">		<span class="function"><span class="keyword">yield</span> return new <span class="title">WaitForSeconds</span>(<span class="params"><span class="number">7</span></span>)</span>;</div><div class="line">		<span class="comment">//等待2秒后返回</span></div><div class="line"></div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+</li>
+<li><p><code>Random.Range(int start, int end)</code>获取随机数，获取范围是个闭合的类似<code>(start,end)</code>。即在不包含start和end的值随机。</p>
+</li>
+<li><p>Renderer(渲染器)的使用:  </p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Renderer render = obj.GetComponent(<span class="string">"Renderer"</span>);</div><div class="line">render.material.color = Color.green;   <span class="comment">//组件颜色</span></div><div class="line">render.material.mainTexture = <span class="literal">null</span>;    <span class="comment">//组件贴图</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>Mathf 数学工具函数  </p>
+<figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">Mathf.Abs(<span class="keyword">int</span> i);</div><div class="line">Mathf.Clamp(<span class="keyword">int</span> num, <span class="keyword">int</span> min, <span class="keyword">int</span> max);</div><div class="line">Mathf.Lerp(<span class="keyword">float</span> start, <span class="keyword">float</span> end, Time.time);</div><div class="line">Mathf.Sin(<span class="number">5</span>);</div><div class="line">Mathf.Cos(<span class="number">7</span>);</div><div class="line">Mathf.Tan(<span class="number">3</span>);</div><div class="line">Mathf.Max(<span class="number">33</span>,<span class="number">77</span>);</div><div class="line">Mathf.Min(<span class="number">33</span>,<span class="number">99</span>);</div><div class="line">Mathf.PI;</div></pre></td></tr></table></figure></li>
+</ol>
+	  
+	</div>
+
+	<div>
+  	<center>
+	<div class="pagination">
+<ul class="pagination">
+	 
+		
+          <li class="prev disabled"><a><i class="fa fa-arrow-circle-o-left"></i>Prev</a></li>
+        
+
+        <li><a href="/archives"><i class="fa fa-archive"></i>Archive</a></li>
+
+		
+		   <li class="next"><a href="/2016/08/29/VBA常用语法/" class="alignright next">Next<i class="fa fa-arrow-circle-o-right"></i></a></li>         
+        
+	
+</ul>
+</div>
+
+    </center>
+	</div>
+
+    <!-- share -->
+    
+        
+    <div class="bdsharebuttonbox">
+        <a href="#" class="bds_more" data-cmd="more"></a>
+        <a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="#" class="bds_fbook" data-cmd="fbook" title="分享到Facebook"></a>
+        <a href="#" class="bds_twi" data-cmd="twi" title="分享到Twitter"></a>
+        <a href="#" class="bds_linkedin" data-cmd="linkedin" title="分享到linkedin"></a>
+        <a href="#" class="bds_evernotecn" data-cmd="evernotecn" title="分享到印象笔记"></a>
+        <a href="#" class="bds_youdao" data-cmd="youdao" title="分享到有道云笔记"></a>
+        <a href="#" class="bds_copy" data-cmd="copy" title="分享到复制网址"></a>
+    </div>
+    <script>
+        window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"1","bdSize":"24"},"share":{}};
+        with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+    </script>
+
+
+        
+
+    
+	
+	<!-- comment -->
+	
+<section id="comment">
+  <h2 class="title">Comments</h2>
+
+  
+</section>
+
+	</div> <!-- col-md-9/col-md-12 -->
+		
+	
+	<div id="side_meta">
+		<div class="col-md-3" id="post_meta"> 
+
+	<!-- date -->
+	
+	<div class="meta-widget">
+	<i class="fa fa-clock-o"></i>
+	2016-08-29 
+	</div>
+	
+
+	<!-- categories -->
+    
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#categorys"><i class="fa fa-folder"></i></a>	
+    <ul id="categorys" class="tag_box list-unstyled collapse in">
+          
+  <li>
+    <li><a href="/categories/游戏Client/">游戏Client<span>1</span></a></li>
+  </li>
+
+    </ul>
+	</div>
+	
+
+	<!-- tags -->
+	
+	<div class="meta-widget">
+	<a data-toggle="collapse" data-target="#tags"><i class="fa fa-tags"></i></a>		  
+    <ul id="tags" class="tag_box list-unstyled collapse in">	  
+	    
+  <li><a href="/tags/Unity3D/">Unity3D<span>1</span></a></li>
+    </ul>
+	</div>
+		
+
+	<!-- toc -->
+	<div class="meta-widget">
+	
+	</div>
+	
+    <hr>
+	
+</div><!-- col-md-3 -->
+
+	</div>
+		
+
+</div><!-- row -->
+
+
+
+	</div>
+  </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2016 John Doe
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
+</body>
+   </html>

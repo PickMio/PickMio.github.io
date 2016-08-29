@@ -1,301 +1,167 @@
-<!DOCTYPE html>
+<!DOCTYPE HTML>
 <html>
 <head>
   <meta charset="utf-8">
   
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <title>Hexo</title>
+  <meta name="author" content="John Doe">
+  
+  
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://yoursite.com/index.html">
-<meta property="og:site_name" content="Hexo">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+
   
-    <link rel="alternative" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  <meta property="og:site_name" content="Hexo"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
   
   
-    <link rel="icon" href="//favicon.png">
+    <link href="/favicon.png" rel="icon">
   
-  <link rel="stylesheet" href="/css/style.css">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/themes/bootstrap.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/font-awesome.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/style.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/responsive.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/highlight.css" media="screen" type="text/css">
+  <link rel="stylesheet" href="/css/google-fonts.css" media="screen" type="text/css">
+  <!--[if lt IE 9]><script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script><![endif]-->
+
+  <script src="/js/jquery-2.0.3.min.js"></script>
+
+  <!-- analytics -->
+  
+
+
+
 </head>
 
-<body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-	<header id="header" class="inner">
-		<a href="/" class="profilepic">
-			
-			<img lazy-src="0" class="js-avatar">
-			
-		</a>
+ <body>  
+  <nav id="main-nav" class="navbar navbar-inverse navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+      <button type="button" class="navbar-header navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+	<span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+       <a class="navbar-brand" href="/">Hexo</a>
+      <div class="collapse navbar-collapse nav-menu">
+		<ul class="nav navbar-nav">
+		  
+		  <li>
+			<a href="/archives" title="All the articles.">
+			  <i class="fa fa-archive"></i>Archives
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/categories" title="All the categories.">
+			  <i class="fa fa-folder"></i>Categories
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/tags" title="All the tags.">
+			  <i class="fa fa-tags"></i>Tags
+			</a>
+		  </li>
+		  
+		  <li>
+			<a href="/about" title="About me.">
+			  <i class="fa fa-user"></i>About
+			</a>
+		  </li>
+		  
+		</ul>
+      </div>
+    </div> <!-- container -->
+</nav>
+<div class="clearfix"></div>
 
-		<hgroup>
-		  <h1 class="header-author"><a href="/">John Doe</a></h1>
-		</hgroup>
-
-		
-
-		
-			<div class="switch-btn">
-				<div class="icon">
-					<div class="icon-ctn">
-						<div class="icon-wrap icon-house" data-idx="0">
-							<div class="birdhouse"></div>
-							<div class="birdhouse_holes"></div>
-						</div>
-						<div class="icon-wrap icon-ribbon hide" data-idx="1">
-							<div class="ribbon"></div>
-						</div>
-						
-						<div class="icon-wrap icon-link hide" data-idx="2">
-							<div class="loopback_l"></div>
-							<div class="loopback_r"></div>
-						</div>
-						
-						
-						<div class="icon-wrap icon-me hide" data-idx="3">
-							<div class="user"></div>
-							<div class="shoulder"></div>
-						</div>
-						
-					</div>
-					
-				</div>
-				<div class="tips-box hide">
-					<div class="tips-arrow"></div>
-					<ul class="tips-inner">
-						<li>Menu</li>
-						<li>Tags</li>
-						
-						<li>Links</li>
-						
-						
-						<li>Über</li>
-						
-					</ul>
-				</div>
-			</div>
-		
-
-		<div class="switch-area">
-			<div class="switch-wrap">
-				<section class="switch-part switch-part1">
-					<nav class="header-menu">
-						<ul>
-						
-							<li><a href="/">主页</a></li>
-				        
-							<li><a href="/archives">所有文章</a></li>
-				        
-						</ul>
-					</nav>
-					<nav class="header-nav">
-						<div class="social">
-							
-								<a class="github" target="_blank" href="#" title="github">github</a>
-					        
-								<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
-					        
-								<a class="rss" target="_blank" href="#" title="rss">rss</a>
-					        
-								<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
-					        
-						</div>
-					</nav>
-				</section>
-				
-				
-				<section class="switch-part switch-part2">
-					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Blog/" style="font-size: 10px;">Blog</a> <a href="/tags/Blogs/" style="font-size: 10px;">Blogs</a> <a href="/tags/PHP/" style="font-size: 10px;">PHP</a> <a href="/tags/Unity3D/" style="font-size: 10px;">Unity3D</a> <a href="/tags/VBA/" style="font-size: 10px;">VBA</a>
-					</div>
-				</section>
-				
-				
-				
-				<section class="switch-part switch-part3">
-					<div id="js-friends">
-					
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">奥巴马的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">卡卡的美丽传说</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">本泽马的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">吉格斯的博客</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">习大大大不同</a>
-			        
-			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://localhost:4000/">托蒂的博客</a>
-			        
-			        </div>
-				</section>
-				
-
-				
-				
-				<section class="switch-part switch-part4">
-				
-					<div id="js-aboutme">我是谁，我从哪里来，我到哪里去？我就是我，是颜色不一样的吃货…</div>
-				</section>
-				
-			</div>
-		</div>
-	</header>				
+  <div class="container">
+  	<div class="content">
+    	 <div class="page-header page-header-inverse ">
+  <h1 class="title title-inverse ">Hexo</h1>
 </div>
 
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-  	<div class="overlay">
-  		<div class="slider-trigger"></div>
-  		<h1 class="header-author js-mobile-header hide">John Doe</h1>
-  	</div>
-	<div class="intrude-less">
-		<header id="header" class="inner">
-			<div class="profilepic">
-				
-					<img lazy-src="0" class="js-avatar">
-				
-			</div>
-			<hgroup>
-			  <h1 class="header-author">John Doe</h1>
-			</hgroup>
-			
-			<nav class="header-menu">
-				<ul>
-				
-					<li><a href="/">主页</a></li>
-		        
-					<li><a href="/archives">所有文章</a></li>
-		        
-		        <div class="clearfix"></div>
-				</ul>
-			</nav>
-			<nav class="header-nav">
-				<div class="social">
-					
-						<a class="github" target="_blank" href="#" title="github">github</a>
-			        
-						<a class="weibo" target="_blank" href="#" title="weibo">weibo</a>
-			        
-						<a class="rss" target="_blank" href="#" title="rss">rss</a>
-			        
-						<a class="zhihu" target="_blank" href="#" title="zhihu">zhihu</a>
-			        
-				</div>
-			</nav>
-		</header>				
-	</div>
-</nav>
+<div class="row page">
 
-      <div class="body-wrap">
-  
-    <article id="post-Unity学习笔记" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/08/29/Unity学习笔记/" class="article-date">
-  	<time datetime="2016-08-29T06:44:18.000Z" itemprop="datePublished">2016-08-29</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+	
+	<div class="col-md-9">
+	
+
+		<div class="slogan">
+      <i class="fa fa-heart"></i>
+      Yet another bootstrap theme.
+</div>    
+		<div id="top_search"></div>
+		<div class="mypage">
+		
+		<!-- title and entry -->
+        <!-- render top articles firstly -->
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/29/Unity学习笔记/">Unity学习笔记</a>
-    </h1>
-  
+		
+            
+		
+            
+		
+            
+		
+            
+		
+        
+        <!-- render other articles -->
+        
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-08-29 </div>
+			<div class="article-title"><a href="/2016/08/29/Unity3d笔记/" >Unity3d笔记</a></div>						
+		</h3>
+	
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ol>
+
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<ol>
 <li><code>GameObject.CreatePrimitive()</code>:创建一个原始游戏对象，七参数可以设置为立方体、球体、圆柱体等系统默认的游戏对象。</li>
 <li><p><code>AddComponent()</code>:用于给该游戏对象添加一个组件。组件没有自身对应的删除方法，需要使用父类执行Object.Destroy()才能删除 </p>
 <figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">GameObject obj = GameObject.Find(<span class="string">"Cube"</span>);  </div><div class="line">obj.AddComponent(<span class="string">"Test"</span>);           <span class="comment">//给对象添加Test脚本</span></div><div class="line">Destroy(obj.GetComponent(<span class="string">"Test"</span>));  <span class="comment">//删除对象的Test脚本</span></div></pre></td></tr></table></figure>
 </li>
 <li><p><code>renderer.material.color</code>:设置渲染材质的颜色或贴图</p>
 </li>
-<li><code>trasform.position</code>:设置该游戏对象的位置</li>
-<li>获取游戏物体的三种方案<figure class="highlight csharp"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">- GameObject obj = GameObject.find(<span class="string">"UI Root\player"</span>);</div><div class="line">	- 该方法的参数为游戏对象在Hierarchy视图中的完整路径</div><div class="line">- GameObject obj = GameObject.FindWithTag(<span class="string">"MyTag"</span>);</div><div class="line">	- 该方法参数为给游戏对象添加的Tag</div><div class="line">- GameObject[] objs = GameObject.FindGameObjectsWithTag(<span class="string">"MyTag"</span>);</div><div class="line">	- 该方法能够获取所有标签为`MyTag`的对象</div></pre></td></tr></table></figure>
-</li>
-</ol>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Unity3D/">Unity3D</a></li></ul>
+<li><code>trasform.position</code>:设置该游戏对象的位置
+	
 	</div>
+  <a type="button" href="/2016/08/29/Unity3d笔记/#more" class="btn btn-default more">Read More</a>
+</div>
 
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/游戏Client/">游戏Client</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/08/29/Unity学习笔记/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-08-29 </div>
+			<div class="article-title"><a href="/2016/08/29/VBA常用语法/" >VBA常用语法</a></div>						
+		</h3>
+	
 
 
-
-
-
-
-
-
-
-  
-    <article id="post-VBA常用语法" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/08/29/VBA常用语法/" class="article-date">
-  	<time datetime="2016-08-29T06:42:53.000Z" itemprop="datePublished">2016-08-29</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/29/VBA常用语法/">VBA常用语法</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ol>
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<ol>
 <li>数组下标是从0开始的</li>
 <li>sheet下标是从1开始的</li>
 <li><p>获取<code>dict</code>的方法  </p>
@@ -308,140 +174,29 @@
 <figure class="highlight vb"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">For</span> <span class="keyword">Each</span> Data <span class="keyword">In</span> dict</div><div class="line">	MsgBox (dict.Item(Data) &amp; <span class="string">":"</span> &amp; Data)</div><div class="line"><span class="keyword">Next</span></div></pre></td></tr></table></figure>
 </li>
 <li><p>vba用 <code>&#39;&amp;&#39;</code>来连接字符串</p>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/VBA/">VBA</a></li></ul>
+	
 	</div>
+  <a type="button" href="/2016/08/29/VBA常用语法/#more" class="btn btn-default more">Read More</a>
+</div>
 
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/脚本语言/">脚本语言</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/08/29/VBA常用语法/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-08-29 </div>
+			<div class="article-title"><a href="/2016/08/29/Blog-模板配置/" >Blog 模板配置</a></div>						
+		</h3>
+	
 
 
-
-
-
-
-
-
-
-  
-    <article id="post-PHP知识点笔记" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/08/29/PHP知识点笔记/" class="article-date">
-  	<time datetime="2016-08-29T06:41:13.000Z" itemprop="datePublished">2016-08-29</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/29/PHP知识点笔记/">PHP知识点笔记</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <ol>
-<li>const可以在类里面作为成员变量 <code>const name = &quot;mio&quot;;</code> 在使用时，需要使用 <code>self::name</code>  来访数据。</li>
-<li>常量可以使用  <code>define(&quot;argName&quot;, &quot;argValue&quot;)</code>; 来定义，使用时直接用<code>argName</code>就行。</li>
-<li><code>json_decode($str, true)</code>;  可以直接将<code>$str</code>字符串强制转换成数组，可以使用  <code>$str[&quot;name&quot;]</code> 来进行访问。</li>
-<li>检测数组里面是否含有某变量常用如下方法:  <figure class="highlight php"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span>(<span class="keyword">isset</span>($ret[<span class="string">'errcode'</span>]))  </div><div class="line"> 		&#123;<span class="comment">//返回失败  </span></div><div class="line"> 			<span class="keyword">return</span> <span class="number">-1</span>;  </div><div class="line"> 		&#125;</div></pre></td></tr></table></figure>
-</li>
-</ol>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/PHP/">PHP</a></li></ul>
-	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/脚本语言/">脚本语言</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/08/29/PHP知识点笔记/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Blog-模板配置" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/08/29/Blog-模板配置/" class="article-date">
-  	<time datetime="2016-08-29T06:38:02.000Z" itemprop="datePublished">2016-08-29</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/29/Blog-模板配置/">Blog 模板配置</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>由于之前的主题landscape(存放在如<code>D:\GitHub\Blogs\themes</code>中)没有自带评论功能，暂时换pacman主题，它使用第三方评论系统<strong>多说</strong>。关于自定义评论功能再议。<br>打开git shell，切换到你的<code>D:\GitHub\Blogs</code>目录下，使用命令安装主题:</p>
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>由于之前的主题landscape(存放在如<code>D:\GitHub\Blogs\themes</code>中)没有自带评论功能，暂时换pacman主题，它使用第三方评论系统<strong>多说</strong>。关于自定义评论功能再议。<br>打开git shell，切换到你的<code>D:\GitHub\Blogs</code>目录下，使用命令安装主题:</p>
 <blockquote>
 <p>git clone <a href="https://github.com/A-limon/pacman.git">https://github.com/A-limon/pacman.git</a> themes/pacman  </p>
 </blockquote>
@@ -452,70 +207,29 @@
 <p>再按照前面介绍的生成静态页面方法，生成后，将public文件夹下内容上传到git hub项目文件中。测试看看效果。</p>
 <blockquote>
 <p>hexo g #是generate的简写，将md文件编译成html静态页面<br>hexo s #是server的简写启动server<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Blog/">Blog</a></li></ul>
+	
 	</div>
+  <a type="button" href="/2016/08/29/Blog-模板配置/#more" class="btn btn-default more">Read More</a>
+</div>
 
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/前端/">前端</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/08/29/Blog-模板配置/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
+           
+		
+           
+			  
+	
+	<!-- display as entry -->	
+		<h3 class="title">
+			<div class="date"> 2016-08-29 </div>
+			<div class="article-title"><a href="/2016/08/29/使用Hexo搭建个人博客/" >使用Hexo搭建个人博客</a></div>						
+		</h3>
+	
 
 
-
-
-
-
-
-
-
-  
-    <article id="post-使用Hexo搭建个人博客" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2016/08/29/使用Hexo搭建个人博客/" class="article-date">
-  	<time datetime="2016-08-29T06:13:56.000Z" itemprop="datePublished">2016-08-29</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2016/08/29/使用Hexo搭建个人博客/">使用Hexo搭建个人博客</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>hexo，一个基于Node.js的静态博客程序。能够将Markdown文件生成静态页面，输出至其根目录的public文件夹下。可以将生成的public文件的所有内容，上传至GitHub的blog项目下。通过类似pickmio.github.io(pickmio改为你自己的GitHub用户名)的网址就能访问你的Blog了。网上也有很多搭建方案，但是我自己在配置却碰到些问题，记录下来希望能有帮助。</p>
+			  <div class="entry">
+  <div class="row">
+	
+	
+		<p>hexo，一个基于Node.js的静态博客程序。能够将Markdown文件生成静态页面，输出至其根目录的public文件夹下。可以将生成的public文件的所有内容，上传至GitHub的blog项目下。通过类似pickmio.github.io(pickmio改为你自己的GitHub用户名)的网址就能访问你的Blog了。网上也有很多搭建方案，但是我自己在配置却碰到些问题，记录下来希望能有帮助。</p>
 <h1 id="下载安装GitHub"><a href="#下载安装GitHub" class="headerlink" title="下载安装GitHub"></a>下载安装GitHub</h1><p>点击<a href="https://windows.github.com/">GitHub下载页面</a>安装过程按照提示一步一步来。GitHub的安装是先下载一个下载器再在线安装。在下载过程中可能会失败，下载进度条并没有完全就中断了。可以按下Windows键，在搜索程序和文件中键入Internet 选项(Internet后有空格)选择Internet 选项,选中 安全选项卡,选择受信任的站点→点击站点按钮。弹出的窗口中的文本框中输入 github-windows.s3.amazonaws.com点击添加。再试着点击<a href="https://windows.github.com/">GitHub下载页面</a>安装。如果没有GitHub账号，可参考<a href="https://help.github.com/articles/set-up-git/">GitHub的帮助文档</a>。</p>
 <p>#下载安装Node.Js<br>点击进入<a href="https://nodejs.org/">Node.Js</a>下载页面。一路下一步即可。</p>
 <p>#安装Hexo<br>配置好GitHub后，双击桌面的Git Shell ,使用npm安装Hexo。  </p>
@@ -525,105 +239,171 @@
 <p>需要安装一些插件，请使用npm安装:</p>
 <blockquote>
 <p>npm install hexo-renderer-ejs –save<br>npm install hexo-renderer-stylus –save<br>npm install hexo-renderer-marked –save<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Blogs/">Blogs</a></li></ul>
+	
 	</div>
-
-      
-	<div class="article-category tagcloud">
-	<a class="article-category-link" href="/categories/前端/">前端</a>
-	</div>
-
-
-      
-        <p class="article-more-link">
-          <a  href="/2016/08/29/使用Hexo搭建个人博客/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-  
+  <a type="button" href="/2016/08/29/使用Hexo搭建个人博客/#more" class="btn btn-default more">Read More</a>
 </div>
-      <footer id="footer">
-  <div class="outer">
-    <div id="footer-info">
-    	<div class="footer-left">
-    		&copy; 2016 John Doe
-    	</div>
-      	<div class="footer-right">
-      		<a href="http://hexo.io/" target="_blank">Hexo</a>  Theme <a href="https://github.com/litten/hexo-theme-yilia" target="_blank">Yilia</a> by Litten
-      	</div>
-    </div>
+
+           
+		
+
+		</div>
+
+		<!-- pagination -->
+		<div>
+  		<center>
+		<div class="pagination">
+<ul class="pagination">
+	 
+</ul>
+</div>
+
+  		</center>
+		</div>
+
+		
+		
+	</div> <!-- col-md-9 -->
+
+	
+		<div class="col-md-3">
+	<div id="sidebar">
+	
+			
+  <div id="site_search">
+   <div class="form-group">
+    <input type="text" id="local-search-input" name="q" results="0" placeholder="Search" class="st-search-input st-default-search-input form-control"/>
+   </div>  
+  <div id="local-search-result"></div>
   </div>
-</footer>
-    </div>
+
+
+		
+			
+	<div class="widget">
+		<h4>Categories</h4>
+		<ul class="tag_box inline list-unstyled">
+		
+			<li><a href="/categories/前端/">前端<span>2</span></a></li>
+		
+			<li><a href="/categories/游戏Client/">游戏Client<span>1</span></a></li>
+		
+			<li><a href="/categories/脚本语言/">脚本语言<span>1</span></a></li>
+		
+		</ul>
+	</div>
+
+		
+			
+	<div class="widget">
+		<h4>Tag Cloud</h4>
+		<ul class="tag_box inline list-unstyled">		
+		
+			<li><a href="/tags/Blogs/">Blogs<span>1</span></a></li>
+		
+			<li><a href="/tags/Blog/">Blog<span>1</span></a></li>
+		
+			<li><a href="/tags/VBA/">VBA<span>1</span></a></li>
+		
+			<li><a href="/tags/Unity3D/">Unity3D<span>1</span></a></li>
+		
+		 
+		</ul>
+	</div>
+
+
+		
+			
+<div class="widget">
+  <h4>Recent Posts</h4>
+  <ul class="entry list-unstyled">
     
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+      <li>
+        <a href="/2016/08/29/Unity3d笔记/" ><i class="fa fa-file-o"></i>Unity3d笔记</a>
+      </li>
+    
+      <li>
+        <a href="/2016/08/29/VBA常用语法/" ><i class="fa fa-file-o"></i>VBA常用语法</a>
+      </li>
+    
+      <li>
+        <a href="/2016/08/29/Blog-模板配置/" ><i class="fa fa-file-o"></i>Blog 模板配置</a>
+      </li>
+    
+      <li>
+        <a href="/2016/08/29/使用Hexo搭建个人博客/" ><i class="fa fa-file-o"></i>使用Hexo搭建个人博客</a>
+      </li>
+    
+  </ul>
+</div>
+
+		
+			
+<div class="widget">
+	<h4>Links</h4>
+	<ul class="blogroll list-unstyled">
+	
+		<li><i class="fa fa-github"></i><a href="https://github.com/wzpan/freemind/" title="Freemind's Github repository." target="_blank"]);">Freemind</a></li>
+	
+		<li><i class="fa fa-github"></i><a href="http://www.github.com/wzpan" title="My Github account." target="_blank"]);">My Github</a></li>
+	
+		<li><i class="fa fa-linkedin"></i><a href="http://www.linkedin.com/in/hahack" title="My Linkin account." target="_blank"]);">My LinkedIn</a></li>
+	
+	</ul>
+</div>
 
 
-<script>
-	var yiliaConfig = {
-		fancybox: true,
-		mathjax: true,
-		animate: true,
-		isHome: true,
-		isPost: false,
-		isArchive: false,
-		isTag: false,
-		isCategory: false,
-		open_in_new: false,
-		root: /
-	}
-</script>
-<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js"></script>
-<script src="/js/main.js"></script>
+		
+	</div> <!-- sidebar -->
+</div> <!-- col-md-3 -->
+
+	
+	
+</div> <!-- row-fluid -->
 
 
-
-
-
-
-<script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-});
-
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';                 
-    }       
-});
-</script>
-
-<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
-
+	</div>
   </div>
+  <div class="container-narrow">
+  <footer> <p>
+  &copy; 2016 John Doe
+  
+      with help from <a href="http://hexo.io/" target="_blank">Hexo</a> and <a href="http://getbootstrap.com/" target="_blank">Twitter Bootstrap</a>. Theme by <a href="http://github.com/wzpan/hexo-theme-freemind/">Freemind</a>.    
+</p> </footer>
+</div> <!-- container-narrow -->
+  
+
+
+  
+<a id="gotop" href="#">   
+  <span>▲</span> 
+</a>
+
+<script src="/js/jquery.imagesloaded.min.js"></script>
+<script src="/js/gallery.js"></script>
+<script src="/js/bootstrap.min.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/search.js"></script> 
+
+
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.css" media="screen" type="text/css">
+<script src="/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox();
+})(jQuery);
+</script>
+
+
+
+   <script type="text/javascript">      
+     var search_path = "search.xml";
+	 if (search_path.length == 0) {
+	 	search_path = "search.xml";
+	 }
+	 var path = "/" + search_path;
+     searchFunc(path, 'local-search-input', 'local-search-result');
+   </script>
+
 </body>
-</html>
+   </html>
